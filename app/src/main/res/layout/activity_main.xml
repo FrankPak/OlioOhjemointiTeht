@@ -8,11 +8,12 @@
 
     <Spinner
         android:id="@+id/spinnerTeatteri"
-        android:layout_width="50dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
         android:hint="Teatteri"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -23,7 +24,7 @@
         android:layout_marginEnd="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Valitse elokuva:"
+        android:hint="Valitse elokuva:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:text="Valitse Teatteri:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -23,7 +24,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private teatteriteko tt;
 
@@ -43,7 +44,19 @@ public class MainActivity extends AppCompatActivity {
         tt = teatteriteko.getInstance();
 
         spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, tt.teatteriarray()));
+        spinner.setOnItemSelectedListener(this);
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
 
     public static class teatteriteko {
         ArrayList<Teatteri> teattrit;
